@@ -179,8 +179,7 @@ FakesAssemblies/
 ![Ll]ib/
 
 #Logs
-/src/aula365.ui/logs/
+GimmeVibe/bld
+!GimmeVibe/bld
 
-#Minified Files
-src/aula365.ui.resources/content/styles/app.css
 
