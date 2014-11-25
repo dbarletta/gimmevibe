@@ -12,7 +12,7 @@ namespace GimmeVibe.Server.Controllers
         // GET: api/Events
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1", "value22" };
         }
 
         // GET: api/Events/5
