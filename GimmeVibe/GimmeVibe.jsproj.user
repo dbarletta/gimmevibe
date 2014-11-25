@@ -6,4 +6,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Android'">
     <DebuggerFlavor>RippleNexus</DebuggerFlavor>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x86'">
+    <DebuggerFlavor>WindowsSimulator</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "GimmeVibe", "GimmeVibe\GimmeVibe.jsproj", "{618D0ABA-646B-43EA-ADD6-DED2696C9DC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeVibe.Server", "GimmeVibe.Server\GimmeVibe.Server.csproj", "{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Android = Debug|Android
@@ -123,6 +125,42 @@ Global
 		{618D0ABA-646B-43EA-ADD6-DED2696C9DC1}.Release|Windows-x86.ActiveCfg = Release|Windows-x86
 		{618D0ABA-646B-43EA-ADD6-DED2696C9DC1}.Release|Windows-x86.Build.0 = Release|Windows-x86
 		{618D0ABA-646B-43EA-ADD6-DED2696C9DC1}.Release|Windows-x86.Deploy.0 = Release|Windows-x86
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Windows Phone (Universal).ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Windows Phone 8.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Android.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Any CPU.Build.0 = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|iOS.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Windows Phone (Universal).ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Windows Phone 8.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Windows-x64.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Distribution|Windows-x86.ActiveCfg = Debug|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Android.ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|iOS.ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Windows Phone (Universal).ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Windows Phone 8.ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Windows-AnyCPU.ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Windows-ARM.ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Windows-x64.ActiveCfg = Release|Any CPU
+		{9EB1F71C-BC6D-422D-8997-3CF6977CFC3C}.Release|Windows-x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

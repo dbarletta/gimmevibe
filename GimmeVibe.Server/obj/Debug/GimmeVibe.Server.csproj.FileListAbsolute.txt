@@ -1,0 +1,14 @@
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\GimmeVibe.Server.dll.config
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\GimmeVibe.Server.dll
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\GimmeVibe.Server.pdb
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\Newtonsoft.Json.dll
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\System.Net.Http.Formatting.dll
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\System.Web.Http.dll
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\System.Web.Http.WebHost.dll
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\Newtonsoft.Json.xml
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\System.Net.Http.Formatting.xml
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\System.Web.Http.xml
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\System.Web.Http.WebHost.xml
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\obj\Debug\GimmeVibe.Server.csprojResolveAssemblyReference.cache
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\obj\Debug\GimmeVibe.Server.dll
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\obj\Debug\GimmeVibe.Server.pdb
