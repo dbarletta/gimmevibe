@@ -111,7 +111,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="scripts\app\gvibe.js" />
-    <Content Include="scripts\app\controllers\home.js" />
+    <Content Include="scripts\app\controllers\CodeCtrl.js" />
     <Content Include="scripts\app\controllers\root.js" />
     <Content Include="scripts\app\controllers\task.js" />
     <Content Include="scripts\app\services\cordova.js" />
