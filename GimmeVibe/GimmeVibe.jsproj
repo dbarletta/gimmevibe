@@ -111,9 +111,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="scripts\app\gvibe.js" />
-    <Content Include="scripts\app\controllers\CodeCtrl.js" />
+    <Content Include="scripts\app\controllers\results.js" />
     <Content Include="scripts\app\controllers\root.js" />
-    <Content Include="scripts\app\controllers\task.js" />
+    <Content Include="scripts\app\controllers\vote.js" />
     <Content Include="scripts\app\services\cordova.js" />
     <Content Include="views\ionic-tab.html" />
     <Folder Include="images\" />

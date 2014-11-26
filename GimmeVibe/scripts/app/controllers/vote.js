@@ -1,6 +1,6 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('TaskCtrl', function ($scope) {
+.controller('VoteCtrl', function ($scope) {
     $scope.close = function () {
         $scope.modal.hide();
     }

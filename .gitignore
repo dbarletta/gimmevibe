@@ -180,3 +180,4 @@ FakesAssemblies/
 GimmeVibe/bld
 !GimmeVibe/bld
 GimmeVibe/bld/Ripple/Android/Debug/index.html
+*.suo
