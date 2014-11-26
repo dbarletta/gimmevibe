@@ -177,11 +177,5 @@ FakesAssemblies/
 
 #Custom Exclude
 ![Ll]ib/
-
-#Logs
 GimmeVibe/bld
 !GimmeVibe/bld
-
-
-*.suo
-*.suo
