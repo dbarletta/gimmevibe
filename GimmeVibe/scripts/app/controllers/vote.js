@@ -1,11 +1,12 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('VoteCtrl', function ($scope) {
-    $scope.close = function () {
-        $scope.modal.hide();
-    }
+.controller('VotesCtrl', function ($scope, $ionicPopup, $state, vote) {
+    $scope.location = 'MIT';
 
-    $scope.add = function () {
-        $scope.modal.hide();
+    $scope.selectEmotion = function (emotion) {
+        
+        vote.emotion = emotion;
+
+        $state.go('home.voteinfo');
     }
 });

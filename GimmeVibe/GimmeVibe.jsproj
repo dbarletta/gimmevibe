@@ -110,13 +110,24 @@
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="images\angry.png" />
+    <Content Include="images\bored.png" />
+    <Content Include="images\cool.png" />
+    <Content Include="images\excited.png" />
+    <Content Include="images\fun.png" />
+    <Content Include="images\happy.png" />
+    <Content Include="images\indifferent.png" />
+    <Content Include="images\logo-title.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\pain.png" />
+    <Content Include="images\sad.png" />
+    <Content Include="scripts\app\controllers\voteInfo.js" />
     <Content Include="scripts\app\gvibe.js" />
     <Content Include="scripts\app\controllers\results.js" />
     <Content Include="scripts\app\controllers\root.js" />
     <Content Include="scripts\app\controllers\vote.js" />
     <Content Include="scripts\app\services\cordova.js" />
-    <Content Include="views\ionic-tab.html" />
-    <Folder Include="images\" />
+    <Content Include="views\home.html" />
     <Content Include="css\ionic.css" />
     <Content Include="fonts\ionicons.eot" />
     <Content Include="fonts\ionicons.svg" />
@@ -124,6 +135,12 @@
     <Content Include="fonts\ionicons.woff" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Content Include="views\results.html" />
+    <Content Include="views\samples\ionic-routing.html" />
+    <Content Include="views\samples\ionic-tab.html" />
+    <Content Include="views\settings.html" />
+    <Content Include="views\vote-info.html" />
+    <Content Include="views\vote.html" />
     <Folder Include="merges\ios\" />
     <Content Include="merges\windows\scripts\platformOverrides.js" />
     <Content Include="merges\windows\scripts\winstore-jscompat.js" />

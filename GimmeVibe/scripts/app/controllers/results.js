@@ -1,5 +1,5 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('CodeCtrl', function ($scope, $timeout, $ionicModal, $ionicActionSheet) {
+.controller('ResultsCtrl', function ($scope, $timeout, $ionicModal, $ionicActionSheet) {
     
 })
