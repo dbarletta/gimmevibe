@@ -1,12 +1,47 @@
 ﻿<ion-view title="Settings">
-    
-    <ion-content class="padding has-header">
-        <p>Setting 1</p>
-        <p>Setting 2</p>
-        <p>Setting 3</p>
-        <p>Setting 4</p>
-        <p>Setting 5</p>
-        <p>Setting 6</p>
+
+    <ion-content class="has-header" has-bouncing="true">
+        <ul class="list">
+            <li class="item item-toggle">
+                Receive Notifications
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" checked>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle">
+                Use GPS
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" checked>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle">
+                Vote as anonymous
+                <label class="toggle toggle-positive">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle">
+                Visible to others
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" checked>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item" ng-click="watchTutorial()">
+                Watch tutorial again!
+            </li>
+        </ul>
     </ion-content>
 
 </ion-view>

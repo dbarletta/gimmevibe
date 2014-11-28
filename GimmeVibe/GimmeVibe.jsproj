@@ -117,10 +117,14 @@
     <Content Include="images\fun.png" />
     <Content Include="images\happy.png" />
     <Content Include="images\indifferent.png" />
+    <Content Include="images\logo-lg.png" />
     <Content Include="images\logo-title.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logo2-lg.png" />
     <Content Include="images\pain.png" />
     <Content Include="images\sad.png" />
+    <Content Include="scripts\app\controllers\settings.js" />
+    <Content Include="scripts\app\controllers\intro.js" />
     <Content Include="scripts\app\controllers\voteInfo.js" />
     <Content Include="scripts\app\gvibe.js" />
     <Content Include="scripts\app\controllers\results.js" />
@@ -135,6 +139,7 @@
     <Content Include="fonts\ionicons.woff" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Content Include="views\intro.html" />
     <Content Include="views\results.html" />
     <Content Include="views\samples\ionic-routing.html" />
     <Content Include="views\samples\ionic-tab.html" />

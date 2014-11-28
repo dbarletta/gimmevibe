@@ -1,0 +1,64 @@
+﻿<style>
+    .slider { height: 100%; }
+    .slider-slide { padding-top: 80px; color: #000; background-color: #fff; text-align: center; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; }
+
+    #logo { margin: 30px 0px; }
+
+    #list { width: 190px; margin: 30px auto; font-size: 20px; }
+        #list ol { margin-top: 30px; }
+            #list ol li { text-align: left; list-style: decimal; margin: 10px 0px; }
+</style>
+
+<ion-view title="">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" ng-click="leftButtonClick()">
+            {{leftButtonContent}}
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="rightButtonClick()">
+            {{rightButtonContent}}
+        </button>
+    </ion-nav-buttons>
+
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+        <ion-slide>
+            <h3>Thank you for choosing the GimmeVibe App!</h3>
+            <div id="logo">
+                <img src="/images/logo-title.png">
+            </div>
+            <div id="logo">
+                <img src="/images/logo-lg.png">
+            </div>
+            <p>
+                We've worked super hard to make you happy.
+            </p>
+            <p>
+                But if you are angry, vote anyway.
+            </p>
+        </ion-slide>
+        <ion-slide>
+            <h3>Using GimmeVibe</h3>
+
+            <h5>Just three steps:</h5>
+            <div class="list">
+                    <div class=item>Express your emotion</div>
+                    <div class=item>Confirm your place</div>
+                    <div class=item>See place vibrancy</div>
+            </div>
+        </ion-slide>
+        <ion-slide>            
+            <h3>Enough Talking?</h3>
+            <div>
+                <button class="button button-large button-outline button-energized" ng-click="startApp()">
+                    Start using GimmeVibe!
+                </button>
+            </div>
+            <h3>Any Cuestion?</h3>
+            <p>
+                Please feel free to contact us <br />
+                at <a href="mailto:info@gimmevibe.com">info@gimmevibe.com</a>
+            </p>
+        </ion-slide>
+    </ion-slide-box>
+</ion-view>

@@ -18,6 +18,11 @@ app.factory('vote', function () {
 //States
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
+    .state('intro', {
+        url: '/',
+        templateUrl: 'views/intro.html',
+        controller: 'IntroCtrl'
+    })
     .state('home', {
         url: '/home',
         abstract: true,
@@ -55,10 +60,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             'settings-tab': {
                 templateUrl: "views/settings.html",
-                //controller: 'SettingsCtrl'
+                controller: 'SettingsCtrl'
             }
         }
     });
 
-    $urlRouterProvider.otherwise("/home/vote");
+    $urlRouterProvider.otherwise("/");
+    //$urlRouterProvider.otherwise("/home/vote");
 });
