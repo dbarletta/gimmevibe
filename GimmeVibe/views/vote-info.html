@@ -6,12 +6,32 @@
 
     <ion-content class="padding has-header has-subheader">
         <div class="list">
-            <div class="item">You feel: {{emotion}}</div>
-            <div class="item">You are at: <i class="ion-ios7-location"></i> {{location}}</div>
+            <div class="item {{emotion}}">
+                You feel: {{emotion | uppercase}}
+                <img class="tiny-emo" ng-src="../images/{{emotion}}.png">
+            </div>
+            <div class="item">
+                You are at: 
+                <i class="ion-ios7-location"></i> {{placeName}}
+            </div>
+            <div class="item" ng-hide="placePhotoUrl == null">
+                <img ng-src="{{placePhotoUrl}}" class="place-photo" />
+            </div>
+            <div class="item">
+                
+            </div>
         </div>
 
-        <button class="button button-energized button-large icon-left ion-star"> Gimme Vibe</button>
+        <button class="button button-energized button-large button-outline icon-left ion-social-rss"
+                ng-click="vote()">
+            Gimme Vibe
+        </button>
 
     </ion-content>
 
 </ion-view>
+
+<style>
+    .tiny-emo { width: 30px; float: right; }
+    .place-photo { width:100%; }
+</style>

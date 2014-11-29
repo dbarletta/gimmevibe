@@ -1,43 +1,25 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('VoteInfoCtrl', function ($scope, vote) {
-    $scope.location = 'MIT';
-
+.controller('VoteInfoCtrl', function ($scope, vote, places) {
     $scope.emotion = vote.emotion;
+    $scope.placeName = ' - ';
+    $scope.placePhotoUrl = null;
 
-    $scope.initPlaces = function () {
-        initializePlaces();
+    $scope.vote = function () {
+
     }
+
+    getNearestPlace();
+    
+    function getNearestPlace() {
+        var place = places.getPlace();
+        $scope.placeName = place.name;
+        if (place.photos && place.photos.length > 0) {
+            $scope.placePhotoUrl = place.photos[0].getUrl({ 'maxWidth': 500 });
+        }
+    }
+
 });
 
 
-var map;
-var service;
-var infowindow;
 
-function initializePlaces() {
-    var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
-
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: pyrmont,
-        zoom: 15
-    });
-
-    var request = {
-        location: pyrmont,
-        radius: '500',
-        types: ['store']
-    };
-
-    service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, callback);
-}
-
-function callback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            var place = results[i];
-            createMarker(results[i]);
-        }
-    }
-}

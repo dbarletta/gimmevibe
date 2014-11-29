@@ -123,6 +123,8 @@
     <Content Include="images\logo2-lg.png" />
     <Content Include="images\pain.png" />
     <Content Include="images\sad.png" />
+    <Content Include="scripts\app\configuration\routes.js" />
+    <Content Include="scripts\app\controllers\placesList.js" />
     <Content Include="scripts\app\controllers\settings.js" />
     <Content Include="scripts\app\controllers\intro.js" />
     <Content Include="scripts\app\controllers\voteInfo.js" />
@@ -130,6 +132,8 @@
     <Content Include="scripts\app\controllers\results.js" />
     <Content Include="scripts\app\controllers\root.js" />
     <Content Include="scripts\app\controllers\vote.js" />
+    <Content Include="scripts\app\services\places.js" />
+    <Content Include="scripts\app\services\vote.js" />
     <Content Include="scripts\app\services\cordova.js" />
     <Content Include="views\home.html" />
     <Content Include="css\ionic.css" />
@@ -140,6 +144,7 @@
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Content Include="views\intro.html" />
+    <Content Include="views\places-list.html" />
     <Content Include="views\results.html" />
     <Content Include="views\samples\ionic-routing.html" />
     <Content Include="views\samples\ionic-tab.html" />
