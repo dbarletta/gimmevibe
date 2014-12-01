@@ -2,7 +2,7 @@
 
 .factory('vote', function () {
     var Vote = function () {
-        this.defaultImage = '/images/noimage.png';
+        this.defaultImage = 'images/noimage.png';
 
         this.emotion = null;        
         this.comments = null;

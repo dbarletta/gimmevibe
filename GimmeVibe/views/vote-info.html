@@ -7,15 +7,15 @@
     <ion-content class="padding has-header has-subheader">
         <div class="list card">
             <div class="item item-avatar ">
-                <img class="emotion-tiny fr" ng-src="../images/{{emotion}}.png">
+                <img class="emotion-tiny fr" ng-src="images/{{emotion}}.png">
                 <h2>
                     I'm feeling <a ui-sref="home.vote">{{emotion | uppercase}}</a>
                 </h2>
-                <p>
+                <h2>
                     At
                     <i class="ion-ios7-location fs20"></i>
                     <a ui-sref="home.placeslist">{{placeName}}</a>
-                </p>
+                </h2>
             </div>
             <label class="item item-input">
                 <input type="text" placeholder="Because...">
