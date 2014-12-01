@@ -2,10 +2,12 @@
 
 .factory('vote', function () {
     var Vote = function () {
-        this.emotion = 'not setted';
-        this.latitude = 0;
-        this.longiture = 0;
+        this.defaultImage = '/images/noimage.png';
+
+        this.emotion = null;        
+        this.comments = null;
+        this.place = null;
     }
 
-    return Vote;
+    return new Vote();
 });

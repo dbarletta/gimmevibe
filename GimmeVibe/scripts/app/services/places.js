@@ -43,6 +43,12 @@
             }          
             
         }
+        
+        this.getAll = function () {
+            if (!needToFetch) {
+                return places;
+            }
+        }
 
     }
 

@@ -1,13 +1,14 @@
-﻿<ion-view title="Results">
+﻿<ion-view title="Where are you?">
 
     <ion-content class="has-header" has-bouncing="true">
         <div class="list">
-            <div class="item">Result 1</div>
-            <div class="item">Result 2</div>
-            <div class="item">Result 3</div>
-            <div class="item">Result 4</div>
-            <div class="item">Result 5</div>
-            <div class="item">Result 6</div>
+            <a ng-repeat="place in places" ng-click="changePlace(place)" class="item item-thumbnail-left">
+                
+                <img ng-src="{{getPhoto(place)}}">
+                <h2>{{ place.name}}</h2>
+                <h4>{{ place.vicinity }}</h4>
+                <h5><i class="ion-ios7-star pr2"></i>{{getRating(place)}}</h5>
+            </a>
         </div>
     </ion-content>
 

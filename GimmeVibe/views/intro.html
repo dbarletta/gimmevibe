@@ -1,15 +1,4 @@
-﻿<style>
-    .slider { height: 100%; }
-    .slider-slide { padding-top: 80px; color: #000; background-color: #fff; text-align: center; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; }
-
-    #logo { margin: 30px 0px; }
-
-    #list { width: 190px; margin: 30px auto; font-size: 20px; }
-        #list ol { margin-top: 30px; }
-            #list ol li { text-align: left; list-style: decimal; margin: 10px 0px; }
-</style>
-
-<ion-view title="">
+﻿<ion-view title="">
     <ion-nav-buttons side="left">
         <button class="button button-clear" ng-click="leftButtonClick()">
             {{leftButtonContent}}
@@ -25,10 +14,10 @@
         <ion-slide>
             <h3>Thank you for choosing the GimmeVibe App!</h3>
             <div id="logo">
-                <img src="../images/logo-title.png">
+                <img ng-src="../images/logo-title.png">
             </div>
             <div id="logo">
-                <img src="../images/logo-lg.png">
+                <img ng-src="../images/logo-lg.png">
             </div>
             <p>
                 We've worked super hard to make you happy.

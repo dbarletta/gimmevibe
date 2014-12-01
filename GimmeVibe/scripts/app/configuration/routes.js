@@ -35,7 +35,7 @@
         views: {
             'vote-tab': {
                 templateUrl: "views/places-list.html",
-                controller: 'PlacesListCtrl'
+                controller: 'PlaceListCtrl'
             }
         }
     })
