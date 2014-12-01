@@ -1,41 +1,55 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+﻿<!DOCTYPE html>
+<html ng-app="gvibe">
+<head>
+    <meta charset="utf-8" />
+    <title>GimmeVibe</title>
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    <!-- GimmeVibe references -->
+    <link href="css/ian.css" rel="stylesheet" />
+    <link href="css/ionic.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyD5cbRAmgT8xoAQMgAkUGSiMWeSI5paJ_A"></script>
+</head>
+<body ng-controller="RootCtrl">
+
+    <ion-nav-bar class="bar-energized" animation="nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon ion-arrow-left-c">
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+
+    <div id="map" style="display:none"></div>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <!--Frameworks-->
+    <script src="scripts/frameworks/angular/angular.js"></script>
+    <script src="scripts/frameworks/angular/angular-animate.js"></script>
+    <script src="scripts/frameworks/angular/angular-resource.js"></script>
+    <script src="scripts/frameworks/angular/angular-sanitize.js"></script>
+    <script src="scripts/frameworks/angular/angular-ui-router.js"></script>
+    <script src="scripts/frameworks/ionic/ionic.js"></script>
+    <script src="scripts/frameworks/ionic/ionic-angular.js"></script>
+
+    <!--GimmeVibe App [gvibe] -->
+    <script src="scripts/app/gvibe.js"></script>
+    <script src="scripts/app/configuration/routes.js"></script>
+
+    <script src="scripts/app/services/cordova.js"></script>
+    <script src="scripts/app/services/vote.js"></script>
+    <script src="scripts/app/services/places.js"></script>
+
+    <script src="scripts/app/controllers/root.js"></script>
+    <script src="scripts/app/controllers/vote.js"></script>
+    <script src="scripts/app/controllers/voteInfo.js"></script>
+    <script src="scripts/app/controllers/intro.js"></script>
+    <script src="scripts/app/controllers/placesList.js"></script>
+    <script src="scripts/app/controllers/results.js"></script>
+    <script src="scripts/app/controllers/settings.js"></script>
+
+</body>
+
 </html>
