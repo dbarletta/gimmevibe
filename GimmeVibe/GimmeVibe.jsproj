@@ -197,6 +197,7 @@
     <Content Include="scripts\app\services\places.js" />
     <Content Include="scripts\app\services\vote.js" />
     <Content Include="scripts\app\services\cordova.js" />
+    <Content Include="scripts\frameworks\ian.js" />
     <Content Include="views\home.html" />
     <Content Include="css\ionic.css" />
     <Content Include="fonts\ionicons.eot" />

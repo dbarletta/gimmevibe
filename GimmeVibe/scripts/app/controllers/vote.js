@@ -1,8 +1,6 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('VotesCtrl', function ($scope, $ionicPopup, $state, vote, places) {
-
-    places.getNearbyPlaces();
+.controller('VotesCtrl', function ($scope, $ionicPopup, $state, vote) {
 
     $scope.selectEmotion = function (emotion) {
         vote.emotion = emotion;

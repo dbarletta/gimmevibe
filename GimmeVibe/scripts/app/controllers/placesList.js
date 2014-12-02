@@ -1,7 +1,9 @@
 ﻿angular.module('gvibe.controllers')
 
 .controller('PlaceListCtrl', function ($scope, $state, places, vote) {
-    $scope.places = places.getAll();
+    places.getAll().then(function (results) {
+        $scope.places = results
+    });
 
     $scope.hasPhoto = function (place) {
         if(place.photos && place.photos.length > 0) 
@@ -15,7 +17,7 @@
             return place.photos[0].getUrl({ 'maxWidth': width || 80 });
         }
         else {
-            return vote.defaultImage;
+            return vote.place.defaultImage;
         }
     }
 
@@ -25,12 +27,9 @@
     }
 
     $scope.changePlace = function (place) {
-
-        vote.place = {
-            name: place.name,
-            photo: $scope.getPhoto(place, 300),
-            rating: $scope.getRating(place)
-        }
+        vote.place.name = place.name;
+        vote.place.photoUrl = $scope.getPhoto(place, 300);
+        vote.place.rating = $scope.getRating(place);
 
         if(vote.emotion == null){
             $state.go('home.vote');

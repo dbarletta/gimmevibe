@@ -14,14 +14,14 @@
                 <h2>
                     At
                     <i class="ion-ios7-location fs20"></i>
-                    <a ui-sref="home.placeslist">{{placeName}}</a>
+                    <a ui-sref="home.placeslist">{{place.name}}</a>
                 </h2>
             </div>
             <label class="item item-input">
                 <input type="text" placeholder="Because...">
             </label>
-            <div class="item item-image" ng-if="hasImage()">
-                <img ng-src="{{placePhotoUrl}}" class="place-photo" ng-hide="placePhotoUrl == null" />
+            <div class="item item-image" ng-if="place.photoUrl != null">
+                <img ng-src="{{place.getImage()}}" class="place-photo" ng-hide="place.photoUrl == null" />
             </div>
             
         </div>

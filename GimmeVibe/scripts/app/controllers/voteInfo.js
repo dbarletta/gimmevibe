@@ -1,17 +1,13 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('VoteInfoCtrl', function ($scope, vote, places) {
+.controller('VoteInfoCtrl', function ($scope, vote, places, cordova) {
     $scope.emotion = vote.emotion;
-    $scope.placeName = ' - ';
-    $scope.placePhotoUrl = null;
-
-    $scope.hasImage = function () {
-        return $scope.placePhotoUrl != null && $scope.placePhotoUrl != vote.defaultImage;
-    }
+    $scope.place = null;
 
     $scope.sendVibe = function () {
-
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        //cordova.ready.then(function () {
+        //    navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+        //});
     }
 
     $scope.getClassFor = function (emotion) {
@@ -31,42 +27,19 @@
         return cls;
     }
 
-    if (vote.place == null) {
-        getNearestPlace();
-    }
-    else {
-        $scope.placeName = vote.place.name;
-        $scope.placePhotoUrl = vote.place.photo;
-    }
-    
-    function getNearestPlace() {
-        var place = places.getPlace();
-        $scope.placeName = place.name;
-        if (place.photos && place.photos.length > 0) {
-            $scope.placePhotoUrl = place.photos[0].getUrl({ 'maxWidth': 500 });
+    var init = function () {
+        if (vote.place.name == null) {
+            places.getPlace().then(function (gPlace) {
+                vote.setPlace(gPlace);
+                $scope.place = vote.place;
+            });
+        }
+        else {
+            $scope.place = vote.place;
         }
     }
 
-
-    var onSuccess = function (position) {
-        alert('Latitude: ' + position.coords.latitude + '\n' +
-              'Longitude: ' + position.coords.longitude + '\n' +
-              'Altitude: ' + position.coords.altitude + '\n' +
-              'Accuracy: ' + position.coords.accuracy + '\n' +
-              'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '\n' +
-              'Heading: ' + position.coords.heading + '\n' +
-              'Speed: ' + position.coords.speed + '\n' +
-              'Timestamp: ' + position.timestamp + '\n');
-    };
-
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('code: ' + error.code + '\n' +
-              'message: ' + error.message + '\n');
-    }
-
-
+    init();
 });
 
 
