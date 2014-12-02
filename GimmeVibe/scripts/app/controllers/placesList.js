@@ -27,9 +27,7 @@
     }
 
     $scope.changePlace = function (place) {
-        vote.place.name = place.name;
-        vote.place.photoUrl = $scope.getPhoto(place, 300);
-        vote.place.rating = $scope.getRating(place);
+        vote.setPlace(place);
 
         if(vote.emotion == null){
             $state.go('home.vote');
