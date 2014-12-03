@@ -39,6 +39,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,12 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Asterisk.cs" />
+    <Compile Include="Infrastructure\EntityFramework\DbGimmeVibe.cs" />
+    <Compile Include="Entities\Device.cs" />
+    <Compile Include="Entities\Emotion.cs" />
+    <Compile Include="Entities\Place.cs" />
+    <Compile Include="Aggregates\Vibe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Aggregates\" />
-    <Folder Include="Entities\" />
-    <Folder Include="Infrastructure\EntityFramework\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
     <Folder Include="ValueObjects\" />
