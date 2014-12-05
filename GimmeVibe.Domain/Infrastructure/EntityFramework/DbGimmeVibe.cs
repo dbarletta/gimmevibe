@@ -1,10 +1,12 @@
+using System;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using GimmeVibe.Domain.Entities;
+using GimmeVibe.Domain.Aggregates;
+
 namespace GimmeVibe.Domain.Infrastructure.EntityFramework
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-
     public partial class DbGimmeVibe : DbContext
     {
         public DbGimmeVibe()

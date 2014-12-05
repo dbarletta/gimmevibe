@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Asterisks] (
-    [Id]           INT          NOT NULL,
+    [Id]           INT          NOT NULL  IDENTITY(1,1),
     [Code]         VARCHAR (50) NOT NULL,
     [CreationDate] DATETIME     NOT NULL,
     [PlaceId]      INT          NOT NULL,

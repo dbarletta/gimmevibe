@@ -1,12 +1,13 @@
-namespace GimmeVibe.Domain.Infrastructure.EntityFramework
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
+using GimmeVibe.Domain.Entities;
 
-    public partial class Vibe
+namespace GimmeVibe.Domain.Aggregates
+{
+    public partial class Vibe : IAggregate
     {
         public long Id { get; set; }
 

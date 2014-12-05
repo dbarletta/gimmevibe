@@ -11,6 +11,13 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GimmeVibe.Database", "Gimme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeVibe.Domain", "GimmeVibe.Domain\GimmeVibe.Domain.csproj", "{AB4213B8-22DE-47A3-8092-B4E4FAC07E98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeVibe.Tests", "GimmeVibe.Tests\GimmeVibe.Tests.csproj", "{E0183504-C19B-45A0-88D8-4E2B86F44F6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B5488BCB-5881-4BEC-8527-9B3044CBD185}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Android = Debug|Android
@@ -243,6 +250,42 @@ Global
 		{AB4213B8-22DE-47A3-8092-B4E4FAC07E98}.Release|Windows-ARM.ActiveCfg = Release|Any CPU
 		{AB4213B8-22DE-47A3-8092-B4E4FAC07E98}.Release|Windows-x64.ActiveCfg = Release|Any CPU
 		{AB4213B8-22DE-47A3-8092-B4E4FAC07E98}.Release|Windows-x86.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Windows Phone (Universal).ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Windows Phone 8.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Android.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Any CPU.Build.0 = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|iOS.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Windows Phone (Universal).ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Windows Phone 8.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Windows-x64.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Distribution|Windows-x86.ActiveCfg = Debug|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Android.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|iOS.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Windows Phone (Universal).ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Windows Phone 8.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Windows-AnyCPU.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Windows-ARM.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Windows-x64.ActiveCfg = Release|Any CPU
+		{E0183504-C19B-45A0-88D8-4E2B86F44F6D}.Release|Windows-x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

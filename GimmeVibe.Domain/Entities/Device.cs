@@ -1,19 +1,19 @@
-namespace GimmeVibe.Domain.Infrastructure.EntityFramework
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
+using GimmeVibe.Domain.Aggregates;
 
-    public partial class Device
+namespace GimmeVibe.Domain.Entities
+{
+    public partial class Device : IEntity
     {
         public Device()
         {
             Vibes = new HashSet<Vibe>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]

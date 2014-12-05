@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Places]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL PRIMARY KEY  IDENTITY(1,1), 
     [Name] VARCHAR(100) NOT NULL, 
     [PhotoUrl] VARCHAR(200) NULL, 
     [Rating] VARCHAR(10) NULL, 
