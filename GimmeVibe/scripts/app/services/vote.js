@@ -1,7 +1,9 @@
 ﻿angular.module('gvibe.services')
 
-.factory('vote', function () {
+.factory('vote', function (apiUrl) {
     var Vote = function () {
+
+        var resourcePath = ian.urlCombine(apiUrl, '/votes');
 
         this.emotion = null;        
         this.comments = null;
@@ -26,6 +28,10 @@
                 this.place.photoUrl = gPlace.photos[0].getUrl({ 'maxWidth': 500 });
             else
                 this.place.photoUrl = null;
+
+        }
+
+        this.save = function () {
 
         }
     }

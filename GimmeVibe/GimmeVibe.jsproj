@@ -194,6 +194,7 @@
     <Content Include="scripts\app\controllers\ResultsCtrl.js" />
     <Content Include="scripts\app\controllers\RootCtrl.js" />
     <Content Include="scripts\app\controllers\VoteCtrl.js" />
+    <Content Include="scripts\app\services\constants.js" />
     <Content Include="scripts\app\services\places.js" />
     <Content Include="scripts\app\services\vote.js" />
     <Content Include="scripts\app\services\cordova.js" />
