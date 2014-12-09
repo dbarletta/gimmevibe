@@ -11,18 +11,18 @@
         $state.go('home.voteinfo');
     }
 
-
-    emotion.getAll().then(function (results) {
+    //initialize
+    emotion.getAll().then(function (data) {
         for (var c = 0; c < 3; c++) {
-            $scope.emotionsRow1.push(results.data[c]);
+            $scope.emotionsRow1.push(data[c]);
         }
 
         for (var c = 0; c < 3; c++) {
-            $scope.emotionsRow2.push(results.data[c + 3]);
+            $scope.emotionsRow2.push(data[c + 3]);
         }
 
         for (var c = 0; c < 3; c++) {
-            $scope.emotionsRow3.push(results.data[c + 6]);
+            $scope.emotionsRow3.push(data[c + 6]);
         }
     });
 })
