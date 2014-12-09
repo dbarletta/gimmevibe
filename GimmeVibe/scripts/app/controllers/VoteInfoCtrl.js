@@ -1,13 +1,12 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('VoteInfoCtrl', function ($scope, vote, places, cordova) {
+.controller('VoteInfoCtrl', function ($scope, vote, places) {
     $scope.emotion = vote.emotion.name;
     $scope.place = null;
+    $scope.device = null;
 
     $scope.sendVibe = function () {
-        //cordova.ready.then(function () {
-        //    navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
-        //});
+        
     }
 
     $scope.getClassFor = function (emotion) {
@@ -37,6 +36,7 @@
         else {
             $scope.place = vote.place;
         }
+
     }
 
     init();

@@ -1,6 +1,6 @@
 ﻿angular.module('gvibe.services')
 
-.service('emotion', function Vote(apiUrl, $http, $q, $timeout) {
+.service('emotion', function Emotion(apiUrl, $http, $q, $timeout) {
 
     var self = this;
     var resourcePath = ian.urlCombine(apiUrl, '/emotions');
@@ -14,14 +14,11 @@
         if (emotions == null) {
             $http.get(resourcePath)
                 .success(function (results) {
-                    $timeout(function () {
-                        emotions = results;
-                        deferred.resolve(results);
-                    }, 5000);
+                    emotions = results;
+                    deferred.resolve(results);
                 });
         }
-        else
-        {
+        else {
             //return cached
             deferred.resolve(emotions);
         }

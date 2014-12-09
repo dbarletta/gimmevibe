@@ -93,7 +93,7 @@
         var getCurrentLocation = function () {
             var deferred = $q.defer();
 
-            cordova.ready.then(function () {
+            cordova.ready().then(function (cordova) {
                 navigator.geolocation.getCurrentPosition(function (position) {
                     lat = position.coords.latitude;
                     long = position.coords.longitude;
