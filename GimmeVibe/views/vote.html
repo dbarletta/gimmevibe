@@ -5,6 +5,11 @@
     </div>
     <ion-content class="has-header has-subheader" has-bouncing="false">
         <div class="row">
+            <div class="col col-33 emo-grid {{e.name}}" ng-repeat="e in emotions">
+                <img ng-src="e.imageUri" ng-click="selectEmotion(e.name)" />
+            </div>
+        </div>
+     <!--<div class="row">
             <div class="col emo-grid happy">
                 <img src="images/happy.png" ng-click="selectEmotion('happy')" />
             </div>
@@ -14,8 +19,8 @@
             <div class="col emo-grid angry">
                 <img src="images/angry.png" ng-click="selectEmotion('angry')" />
             </div>
-        </div>
-        <div class="row">
+        </div>-->
+        <!--<div class="row">
             <div class="col emo-grid cool">
                 <img src="images/cool.png" ng-click="selectEmotion('cool')" />
             </div>
@@ -36,7 +41,7 @@
             <div class="col emo-grid bored">
                 <img src="images/bored.png" ng-click="selectEmotion('bored')" />
             </div>
-        </div>
+        </div>-->
     </ion-content>
 
 </ion-view>
