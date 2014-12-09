@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
 using GimmeVibe.Domain.Aggregates;
+using Newtonsoft.Json;
+
 
 namespace GimmeVibe.Domain.Entities
 {
@@ -30,6 +32,7 @@ namespace GimmeVibe.Domain.Entities
 
         public string Description { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Vibe> Vibes { get; set; }
     }
 }

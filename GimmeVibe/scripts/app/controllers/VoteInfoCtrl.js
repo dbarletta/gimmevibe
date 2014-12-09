@@ -1,7 +1,7 @@
 ﻿angular.module('gvibe.controllers')
 
 .controller('VoteInfoCtrl', function ($scope, vote, places, cordova) {
-    $scope.emotion = vote.emotion;
+    $scope.emotion = vote.emotion.name;
     $scope.place = null;
 
     $scope.sendVibe = function () {

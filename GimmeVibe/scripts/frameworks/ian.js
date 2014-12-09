@@ -46,33 +46,56 @@ ian.escapeRegex = function (str) {
 }
 
 ian.replaceAll = function (find, replace, str) {
-    return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+    return str.replace(new RegExp(ian.escapeRegex(find), 'g'), replace);
 }
 
 ian.combine = function (separator) {
     //combine
-    var combined = '';
-    var args = arguments.slice(1);
+    var args = Array.prototype.slice.call(arguments, 1);
+    var argArray = [];
     for (var i = 0; i < args.length; i++) {
-        combined += args[i];
+        argArray.push(args[i]);
     }
-
-    //fix duplicates
-    if (separator !== undefined) {
-        combined = ian.replaceAll((separator + separator), separator, combined);
-    }
-
-    return combined;
+    
+    return argArray.join(separator);
 }
 
 ian.urlCombine = function () {
-    var args = arguments.unshift('/');
-    ian.combine.apply(this, args);
+    var separator = '/';
+
+    //fix arguments
+    for (var i = 0; i < arguments.length; i++) {
+        var arg = arguments[i];
+        if (arg.startsWith(separator)) {
+            arg = arg.replace(separator, ''); //remove starting slash
+        }
+        if (arg.endsWith(separator)) {
+            arg = arg.replace(new RegExp(separator + '$'), ''); //remove ending slash
+        }
+        arguments[i] = arg;
+    }
+
+    Array.prototype.unshift.call(arguments, separator);
+    return ian.combine.apply(null, arguments);
 }
 
 ian.pathCombine = function () {
-    var args = arguments.unshift('\\');
-    ian.combine.apply(this, args);
+    var separator = '\\';
+
+    //fix arguments
+    for (var i = 0; i < arguments.length; i++) {
+        var arg = arguments[i];
+        if (arg.startsWith(separator)) {
+            arg = arg.replace(separator, ''); //remove starting slash
+        }
+        if (arg.endsWith(separator)) {
+            arg = arg.replace(new RegExp(separator + '$'), ''); //remove ending slash
+        }
+        arguments[i] = arg;
+    }
+
+    Array.prototype.unshift.call(arguments, separator);
+    return ian.combine.apply(null, arguments);
 }
 
 /*** Extensions ***/

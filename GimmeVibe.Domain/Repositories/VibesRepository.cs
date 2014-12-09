@@ -9,11 +9,11 @@ using GimmeVibe.Domain.Infrastructure.EntityFramework;
 
 namespace GimmeVibe.Domain.Repositories
 {
-    public interface IVibeRepository : IRepository<Vibe> { }
+    public interface IVibesRepository : IRepository<Vibe> { }
 
-    public class VibeRepository : RepositoryBase<Vibe>, IVibeRepository
+    public class VibesRepository : RepositoryBase<Vibe>, IVibesRepository
     {
-        public VibeRepository(IContextFactory factory)
+        public VibesRepository(IContextFactory factory)
             : base(factory)
         {
 

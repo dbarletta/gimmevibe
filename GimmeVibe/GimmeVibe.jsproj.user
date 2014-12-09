@@ -5,7 +5,7 @@
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Android'">
-    <DebuggerFlavor>AndroidEmulator</DebuggerFlavor>
+    <DebuggerFlavor>RippleNexus</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x86'">
     <DebuggerFlavor>WindowsSimulator</DebuggerFlavor>

@@ -12,3 +12,7 @@ D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\System.Web.Http.WebHost.
 D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\obj\Debug\GimmeVibe.Server.csprojResolveAssemblyReference.cache
 D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\obj\Debug\GimmeVibe.Server.dll
 D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\obj\Debug\GimmeVibe.Server.pdb
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\GimmeVibe.Domain.dll
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\EntityFramework.dll
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\GimmeVibe.Domain.pdb
+D:\dev\iantech\GimmeVibe\gimmevibe\GimmeVibe.Server\bin\EntityFramework.xml

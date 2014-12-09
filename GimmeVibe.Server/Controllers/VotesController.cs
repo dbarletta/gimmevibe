@@ -12,12 +12,12 @@ namespace GimmeVibe.Server.Controllers
 {
     public class VotesController : ApiController
     {
-        private IVibeRepository _vibeRepository;
+        private IVibesRepository _vibeRepository;
 
         public VotesController()
         {
             var ctxFactory = new EFContextFactory();
-            _vibeRepository = new VibeRepository(ctxFactory);
+            _vibeRepository = new VibesRepository(ctxFactory);
         }
 
         // GET: api/votes
