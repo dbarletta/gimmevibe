@@ -1,12 +1,13 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('VoteInfoCtrl', function ($scope, vote, places) {
+.controller('VoteInfoCtrl', function ($scope, $ionicPopup, vote, places, device) {
     $scope.emotion = vote.emotion.name;
     $scope.place = null;
     $scope.device = null;
+    $scope.vote = vote;
 
     $scope.sendVibe = function () {
-        
+        vote.save().then(voteSuccess, voteFail);
     }
 
     $scope.getClassFor = function (emotion) {
@@ -25,8 +26,25 @@
 
         return cls;
     }
+    
+    var voteSuccess = function(){
+        $ionicPopup.alert({
+            title: 'Thanks for voting!',
+            template: 'Your vibe has been received'
+        });
+    }
 
+    var voteFail = function(){
+        $ionicPopup.alert({
+            title: 'Ops, something went wrong!',
+            template: 'We couldn\'t register your vibe'
+        });
+    }
+
+    //TODO: move this code to a prior stage so that is earlier calculated
     var init = function () {
+
+        //init google places
         if (vote.place.name == null) {
             places.getPlace().then(function (gPlace) {
                 vote.setPlace(gPlace);
@@ -37,6 +55,10 @@
             $scope.place = vote.place;
         }
 
+        //init cordova device info
+        device.getDeviceInfo().then(function (device) {
+            $scope.device = device;
+        });
     }
 
     init();

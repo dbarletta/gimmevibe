@@ -9,6 +9,11 @@ namespace GimmeVibe.Domain.Aggregates
 {
     public partial class Vibe : IAggregate
     {
+        public Vibe()
+        {
+            CreationDate = DateTime.Now;
+        }
+
         public long Id { get; set; }
 
         public int DeviceId { get; set; }
@@ -19,7 +24,7 @@ namespace GimmeVibe.Domain.Aggregates
 
         public int? AsteriskId { get; set; }
 
-        [StringLength(10)]
+        [StringLength(200)]
         public string Comment { get; set; }
 
         public DateTime CreationDate { get; set; }
@@ -31,5 +36,21 @@ namespace GimmeVibe.Domain.Aggregates
         public virtual Emotion Emotion { get; set; }
 
         public virtual Place Place { get; set; }
+
+
+        public bool HasAsterisk()
+        {
+            return this.Comment.Contains("*");
+        }
+
+        public Asterisk BuildAsterisk()
+        {
+            if (HasAsterisk())
+            {
+                this.Asterisk = new Asterisk(this.Comment);
+            }
+
+            return this.Asterisk;
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace GimmeVibe.Server.Controllers
         // POST: api/votes
         public void Post([FromBody]Vibe vibe)
         {
-            _vibeRepository.SaveAggregate(vibe);
+            _vibeRepository.Save(vibe); 
         }
 
         // DELETE: api/votes/5

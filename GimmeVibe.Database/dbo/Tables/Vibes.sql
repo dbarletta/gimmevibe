@@ -4,7 +4,7 @@
     [EmotionId]    INT        NOT NULL,
     [PlaceId]      INT        NOT NULL,
     [AsteriskId]   INT        NULL,
-    [Comment]      NCHAR (10) NULL,
+    [Comment]      VARCHAR(200) NULL,
     [CreationDate] DATETIME   NOT NULL,
     CONSTRAINT [PK_Voting] PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_Vibes_Asterisks] FOREIGN KEY ([AsteriskId]) REFERENCES [dbo].[Asterisks] ([Id]),
