@@ -11,6 +11,8 @@ namespace GimmeVibe.Domain.Entities
     {
         public Place()
         {
+            CreationDate = DateTime.Now;
+
             Asterisks = new HashSet<Asterisk>();
             Vibes = new HashSet<Vibe>();
         }

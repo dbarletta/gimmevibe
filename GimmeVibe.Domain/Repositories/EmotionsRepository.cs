@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GimmeVibe.Domain.Aggregates;
+using GimmeVibe.Domain.Entities;
 using GimmeVibe.Domain.Infrastructure.EntityFramework;
 
 namespace GimmeVibe.Domain.Repositories
 {
-    public interface IVibeRepository : IRepository<Vibe> { }
+    public interface IEmotionsRepository : IRepository<Emotion> { }
 
-    public class VibeRepository : RepositoryBase<Vibe>, IVibeRepository
+    public class EmotionsRepository : RepositoryBase<Emotion>, IEmotionsRepository
     {
-        public VibeRepository(IContextFactory factory)
+        public EmotionsRepository(IContextFactory factory)
             : base(factory)
         {
 

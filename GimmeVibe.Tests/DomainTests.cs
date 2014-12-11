@@ -37,7 +37,7 @@ namespace GimmeVibe.Tests
             vibe.Place = place;
             vibe.CreationDate = DateTime.Now;
 
-            var repo = new VibeRepository(new EFContextFactory());
+            var repo = new VibesRepository(new EFContextFactory());
             
             //act
             Exception exc = null;

@@ -44,7 +44,7 @@
         views: {
             'results-tab': {
                 templateUrl: "views/results.html",
-                //controller: 'ResultsCtrl'
+                controller: 'ResultsCtrl'
             }
         }
     })

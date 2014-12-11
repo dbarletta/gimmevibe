@@ -1,34 +1,62 @@
 ﻿angular.module('gvibe.services')
 
-.factory('vote', function () {
-    var Vote = function () {
+.service('vote', function Vote(apiUrl, $http, device) {
 
-        this.emotion = null;        
-        this.comments = null;
-        this.place = {};
-        this.place.name = null;
-        this.place.photoUrl = null;
-        this.place.rating = null;
-        this.place.defaultImage = 'images/noimage.png';
+    var resourcePath = ian.urlCombine(apiUrl, '/votes');
 
-        this.place.hasImage = function () {
-            return this.getImage() != this.defaultImage;
-        }
+    var self = this;
 
-        this.place.getImage = function () {
-            return this.photoUrl != null ? this.photoUrl : this.defaultImage;
-        }
+    self.emotion = null;
+    self.comment = null;
 
-        this.setPlace = function (gPlace) {
-            this.place.name = gPlace.name;
-            this.place.rating = gPlace.rating;
-            if (gPlace.photos && gPlace.photos.length > 0)
-                this.place.photoUrl = gPlace.photos[0].getUrl({ 'maxWidth': 500 });
-            else
-                this.place.photoUrl = null;
-
-        }
+    self.place = {};
+    self.place.name = null;
+    self.place.photoUrl = null;
+    self.place.rating = null;
+    self.place.defaultImage = 'images/noimage.png';
+    self.place.googlePlaceId = null;
+    self.place.hasImage = function () {
+        return self.getImage() != self.defaultImage;
+    }
+    self.place.getImage = function () {
+        return self.place.photoUrl != null ? self.place.photoUrl : self.place.defaultImage;
     }
 
-    return new Vote();
+    self.setPlace = function (gPlace) {
+        self.place.name = gPlace.name;
+        self.place.rating = gPlace.rating;
+        if (gPlace.photos && gPlace.photos.length > 0)
+            self.place.photoUrl = gPlace.photos[0].getUrl({ 'maxWidth': 500 });
+        else
+            self.place.photoUrl = null;
+
+        self.place.googlePlaceId = gPlace.id;
+    }
+
+    self.save = function () {
+        //build voting
+        var voting = {};
+
+        //voting vibe
+        voting.emotionId = self.emotion.id;
+        voting.comment = self.comment;
+        
+        //voting device
+        voting.device = {
+            model: device.model,
+            platform: device.platform,
+            version: device.version,
+            uuid: device.uuid
+        }
+
+        //voting place
+        voting.place = {
+            name: self.place.name,
+            photoUrl: self.place.photoUrl,
+            rating: self.place.rating,
+            googlePlaceId: self.place.googlePlaceId
+        }
+
+        return $http.post(resourcePath, voting);
+    }
 });
