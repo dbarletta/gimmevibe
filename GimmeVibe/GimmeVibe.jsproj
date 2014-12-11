@@ -231,6 +231,7 @@
     <Content Include="scripts\app\services\constants.js" />
     <Content Include="scripts\app\services\device.js" />
     <Content Include="scripts\app\services\emotion.js" />
+    <Content Include="scripts\app\services\location.js" />
     <Content Include="scripts\app\services\places.js" />
     <Content Include="scripts\app\services\vote.js" />
     <Content Include="scripts\app\services\cordovaIonic.js" />

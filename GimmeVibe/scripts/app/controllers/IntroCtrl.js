@@ -1,13 +1,22 @@
 ﻿angular.module('gvibe.controllers')
 
-.controller('IntroCtrl', function ($scope, $state) {
-
+.controller('IntroCtrl', function ($scope, $state, $ionicLoading, places) {
     // Called to navigate to the main app
     var startApp = function () {
-        $state.go('home.vote');
 
-        // Set a flag that we finished the tutorial
-        window.localStorage['didTutorial'] = true;
+        $ionicLoading.show({
+            template: 'Loading...'
+        });
+
+        var gotoHome = function () {
+            $ionicLoading.hide();
+            $state.go('home.vote');
+            // Set a flag that we finished the tutorial
+            window.localStorage['didTutorial'] = true;
+        }
+
+        //initialize places before starting app
+        places.getAll().then(gotoHome, gotoHome);
     };
 
     //No this is silly
@@ -15,6 +24,9 @@
     if (window.localStorage['didTutorial'] === "true") {
         console.log('Skip intro');
         startApp();
+    }
+    else {
+        places.getAll();
     }
 
     $scope.startApp = startApp;
